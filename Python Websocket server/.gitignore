@@ -1,0 +1,4 @@
+yolov5/
+yolov5s.pt
+.env
+__pycache__/

@@ -1,0 +1,18 @@
+1. Configure port access in windows firewall
+    - open Windows Defender Firewall with Advance Security
+    - bikin inbound rule baru untuk port WEBSOCKET_AND_HTTP_PORT yang dipakai quart dengan tipe koneksi TCP
+    - bikin inbound rule baru untuk port mDNS standard, yaitu 5353 dengan tipe koneksi UDP
+
+2. install python requirements nya
+    - pip install -r requirements.txt
+
+4. add changes to .env firewall
+
+5. add changes to the platformio.ini file
+    - to get the current server device's ip you can use "ipconfig" command in cmd to get the local IPv4 address of this server
+    - local ip is not always required, it's a backup for when the mDNS doesn't work
+    - usually under "Wireless LAN adapter Wi-Fi:" for wireless WiFi connection
+    - if you use ethernet it's usually under "Ethernet adapter" section or so...
+
+
+
