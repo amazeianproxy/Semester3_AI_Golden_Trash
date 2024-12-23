@@ -24,6 +24,7 @@ uint16_t angle = 0;
 bool connected = false;
 QueueHandle_t servoTaskQ;
 bool finished_confirmation;
+bool flagReceived = true;
 
 
 void onMessageCallback(WebsocketsMessage msg);
@@ -149,6 +150,11 @@ void networkingcore(void *parameter){
 
     client.poll();
 
+    if(!flagReceived){
+      vTaskDelay(pdMS_TO_TICKS(70));
+      continue;
+    }
+
 
     if(sharedFB) {
       esp_camera_fb_return(sharedFB);
@@ -176,6 +182,7 @@ void networkingcore(void *parameter){
     serializeJson(jsonDoc, jsonStr);
     // websocket uploading
     client.send(jsonStr);
+    flagReceived = false;
     vTaskDelay(pdMS_TO_TICKS(DELAYCAPTURE));
   }
 }
@@ -202,6 +209,7 @@ void onMessageCallback(WebsocketsMessage msg){
   const char* theType = doc["type"];
   
   if(strcmp(theType, "servo") == 0){
+    flagReceived = true;
     servo_angle = doc["angle"].as<uint16_t>();
     xprintln("Servo angle set to: " + String(servo_angle));
     if(servo_angle != servo_curr_angle){

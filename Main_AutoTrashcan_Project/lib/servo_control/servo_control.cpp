@@ -32,17 +32,17 @@ void setupServo() {
 
 void turnLeft(uint16_t delays) {
     myservo.writeMicroseconds(1300);
-    vTaskDelay(pdMS_TO_TICKS(delays));
+    vTaskDelay(pdMS_TO_TICKS(delays + DELAYLEFTBIAS));
 }
 
 void turnRight(uint16_t delays) {
     myservo.writeMicroseconds(1700);
-    vTaskDelay(pdMS_TO_TICKS(delays));
+    vTaskDelay(pdMS_TO_TICKS(delays + DELAYRIGHTBIAS));
 }
 
 void neutral(uint16_t delays) {
     myservo.writeMicroseconds(1500);
-    vTaskDelay(pdMS_TO_TICKS(delays));
+    vTaskDelay(pdMS_TO_TICKS(delays + DELAYNEUTRALBIAS));
 }
 
 // messages received from the websocket
