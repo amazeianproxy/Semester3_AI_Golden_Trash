@@ -4,10 +4,10 @@ an AI powered dumpster that uses trash classification for inferencing with a YOL
 
 Guide to setup your own device.
 1. Get building your own chamber !!!
-![Alt text](images/device.jpg)
+![image of the device](images/device.jpg)
 
 2. Develop the circuit
-![Alt text](images/scheme.jpg)
+![image of the electronic circuit](images/scheme.jpg)
 
 3. Setup the server
     A. To setup the server, open up cmd and cd into the "Python Websocket server" folder.
