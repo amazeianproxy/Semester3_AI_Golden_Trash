@@ -2,6 +2,7 @@
     * for the ip address, makesure to check the server's ip address by using the cmd and typing in ipconfig, match the ip with this ip
 
 2. The port and websocket variables have to be the same as the python server device's credentials.
+2. The port and websocket variables have to be the same as the python server device's credentials.
 
 3. ATTENTION !!!
 
@@ -12,9 +13,12 @@ IV. The route is the server's route (It is recommended to not change this.)
 V. The WEBSOCKET_HOST_NAME is for mDNS, but it is probably not needed (still works because of the static ip).
 
 4. I left the platformio.ini for a reference, in this project, where I'm using an ESP32-WROVER-E CAM devboard and a servo, which is a MG90S 360 continuous servo.
+4. I left the platformio.ini for a reference, in this project, where I'm using an ESP32-WROVER-E CAM devboard and a servo, which is a MG90S 360 continuous servo.
 
 5. To run, CTRL+SHIFT+P and search for "PlatoformIO: New Terminal".
+5. To run, CTRL+SHIFT+P and search for "PlatoformIO: New Terminal".
 
+6. Plug in your devboard.
 6. Plug in your devboard.
 
 7. Run "pio run -t clean" to clean the build.
