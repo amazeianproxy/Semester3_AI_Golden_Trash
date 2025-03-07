@@ -2,6 +2,11 @@
 
 This is an AI powered dumpster that uses trash classification for inferencing with a YOLOv5 model and an embedded system with EPS32. This also happens to be a project created for BINUS University's Computer Science major, 3rd Semester, for the Artificial Intelligence course.
 
+Team Members:
+* Ian Mulya Chiuandi (@amazeianproxy)
+* Jason Melvin Hartono (@123jason689)
+* Anisa Dwi Lestari
+
 Guide to setup your own device:
 1. Get building your own chamber !!!
 ![image of the device](images/device.jpg)
