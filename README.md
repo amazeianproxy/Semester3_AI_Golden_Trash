@@ -1,6 +1,6 @@
 GOLDEN TRASH
 
-This is an AI powered dumpster that uses trash classification for inferencing with a YOLOv5 model and an embedded system with EPS32.
+This is an AI powered dumpster that uses trash classification for inferencing with a YOLOv5 model and an embedded system with EPS32. This is a project created for BINUS University's Computer Science major, 3rd Semester, for the Artificial Intelligence course.
 
 Guide to setup your own device:
 1. Get building your own chamber !!!
